@@ -1,0 +1,56 @@
+h1 {
+    text-align: center;
+    background-color: lightblue;
+    margin: 15px auto;
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.container {
+    display: flex;
+}
+
+.description {
+    background-color: lightcyan;
+    padding: 10px;
+    border: 2px solid grey;
+    margin: 30px 20px;
+    font-weight: bold;
+}
+
+.ingredients {
+    background-color: lightcyan;
+    padding: 10px;
+    border: 2px solid grey;
+    margin: 30px 20px 0px 20px;
+}
+
+.steps {
+    background-color: lightcyan;
+    padding: 10px;
+    border: 2px solid grey;
+    margin: 10px 20px;
+}
+
+img {
+    display: inline-block;
+    background-color: lightcyan;
+    padding: 10px;
+    border: 2px solid grey;
+    margin: 10px;
+    width: 550px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    background-color: lightgray;
+    margin: 30px auto;
+    font-size: 30px;
+    padding: 10px;
+    width: 200px;
+}
