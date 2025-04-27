@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-        function capitalize(szoveg)
+        function lastLetter(szoveg)
         {
-            return `${szoveg.at(0).toUpperCase()}${szoveg.slice(1)}`
+            return `${szoveg.at(-1)}`
         }
 
-        console.log(capitalize("boti"))
+        console.log(lastLetter("jackson"))
     </script>
 </body>
 </html>
