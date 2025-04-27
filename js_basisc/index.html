@@ -7,12 +7,12 @@
 </head>
 <body>
     <script>
-        function multiply(num1, num2)
+        function capitalize(szoveg)
         {
-            return num1 * num2
+            return `${szoveg.at(0).toUpperCase()}${szoveg.slice(1)}`
         }
 
-        console.log(multiply(5, 7))
+        console.log(capitalize("boti"))
     </script>
 </body>
 </html>
