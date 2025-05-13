@@ -29,3 +29,15 @@ div.appendChild(pInDiv)
 
 
 body.appendChild(div)
+
+
+// the JavaScript file
+// METHODS 2 & 3
+const btn = document.querySelector("#btn");
+
+// METHOD 3
+btn.addEventListener("click", function (e) {
+  e.target.style.background = "cyan";
+});
+
+
