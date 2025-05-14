@@ -1,6 +1,55 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 button{
-    font-size: 100px;
-    margin: 20px;
+    font-size: 50px;
+    margin: 50px;
     text-align: center;
     padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    border-radius: 10px;
+}
+
+button:hover{
+    background-color: grey;
+}
+
+.game{
+    display: flex;
+    justify-content:space-between;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+
+.guess-titles{
+    font-size: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.humanemoji, .compemoji{
+    font-size: 200px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+.scoreboard{
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
