@@ -1,6 +1,10 @@
 let humanScore = 0;
 let compScore = 0;
 
+const buttons = document.querySelectorAll("button")
+const body = document.querySelector("body")
+
+
 function getComputerChoice()
 {
     let randNum = Math.random();
@@ -19,14 +23,23 @@ function getComputerChoice()
     return compChoice.toLowerCase();
 }
 
-function getHumanChoice()
+function getHumanChoice(callback)
 {
-    humanChoice = prompt("Enter your guess");
-    return humanChoice.toLowerCase();
+    let humanChoice;
+
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            humanChoice = button.textContent.toLowerCase();
+            callback(humanChoice)
+        })
+    })
+
 }
 
-function playRound(humanChoice, compChoice)
+function play5Round(humanChoice)
 {
+    compChoice = getComputerChoice()
+    console.log(`Human: ${humanChoice} Computer: ${compChoice}`)
     if(humanChoice == compChoice){
         console.log("DRAW")
     }
@@ -47,23 +60,37 @@ function playRound(humanChoice, compChoice)
         compScore += 1;
     }
 
+    if(humanScore==5 || compScore==5)
+    {
+        let winner;
+
+        buttons.forEach(button => {
+            button.remove();
+        });
+
+        if(humanScore == 5)
+        {
+            winner = "YOU"
+        }
+        else{
+            winner = "THE COMPUTER"
+        }
+        const finishText = document.createElement("h1")
+        finishText.textContent = `${winner} WON`
+        body.appendChild(finishText)
+
+    }
+
+    console.log(`Your Score: ${humanScore} \n Computer Score: ${compScore}`)
+
 }
+
 
 
 
 function playGame()
 {
-    while(humanScore != 5 && compScore != 5)
-    {
-        humanChoice = getHumanChoice()
-        compChoice = getComputerChoice()
-
-        console.log(`Your choice: ${humanChoice} Computer choice: ${compChoice}`)
-
-        playRound(humanChoice, compChoice)
-
-        console.log(`Your Score: ${humanScore} \n Computer Score: ${compScore}`)
-    }
+    getHumanChoice(play5Round)
 }
 
 playGame()
