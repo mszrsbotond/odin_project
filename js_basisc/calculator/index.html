@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen num"></div>
+        </div>
+        <div class="numbers">
+            <div class="row row-4">
+                <button class="func" id="clear">Clear</button>
+                <button class="func" id="undo">Undo</button>
+                <button class="func" id="subtract">/</button>
+                <button class="func" id="multiply">*</button>
+            </div>
+            <div class="row row-3">
+                <button class="digit num-7">7</button>
+                <button class="digit num-8">8</button>
+                <button class="digit num-9">9</button>
+                <button class="func" id="extract">-</button>
+            </div>
+            <div class="row row-2">
+                <button class="digit num-4">4</button>
+                <button class="digit num-5">5</button>
+                <button class="digit num-6">6</button>
+                <button class="func" id="add">+</button>
+            </div>
+            <div class="row row-1">
+                <button class="digit num-1">1</button>
+                <button class="digit num-2">2</button>
+                <button class="digit num-3">3</button>
+                <button class="func" id="plus-minus">+/-</button>
+            </div>
+            <div class="row row-0">
+                <button class="digit num-0">0</button>
+                <button class="func" id="dot">.</button>
+                <button id="equal">=</button>
+            </div>
+        </div>
+        </div>
+
+        <script src="calc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+body{
+    background-color: #454545;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    height: 700px;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.screen{
+    height: 100px;
+    width: 500px;
+    background-color:#ffd45e;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.numdigit{
+    font-size: 40px;
+}
+
+.screen.num{
+    font-size: 40px;
+    margin-right: 20px;
+    font-weight: bolder;
+    font-family: "Press Start 2P";
+}
+
+.numbers{
+    display: flex;
+    height: 600px;
+    width: 500px;
+    background-color: white;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+button{
+    border-color: black;
+    border-radius: 1px;
+    border-style: solid;
+    font-size: 30px;
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    font-family: "Press Start 2P";
+}
+
+#plus-minus{
+    font-size: 20px;
+}
+
+#clear, #undo{
+    font-size: 15px;
+}
+
+button.digit.num-0{
+    width: 200px;
+}
+
+.row{
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.row-4{
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: gray;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(95%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.func{
+    background-color: lightsalmon;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.func:hover{
+    background-color: orange;
+}
+
+.func:active{
+    transform: scale(95%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);box-shadow: inset;
+}
+
+#equal{
+    background-color: lightcyan;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+#equal:hover{
+    background-color: cyan;
+}
+
+#equal:active{
+    transform: scale(95%);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
