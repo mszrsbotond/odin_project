@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+table{
+    margin-top: 100px;
+    background-color: #131414;
+    border: 2px solid #7e7f80;
+    border-collapse: collapse;
+}
+
+th,td{
+    border: 1px solid #7e7f80;
+    padding: 10px;
+    text-align: center;
+}
+
+.name-col{
+    border-right: 3px solid green;
+    border-left: 3px solid green;
+}
+
+.name-col.name{
+    border-top: 3px solid green; 
+}
+
+.name-col.pluto{
+    border-bottom: 3px solid green;
+}
+
+th{
+    background-color: #222224;
+}
+
+.light{
+    background-color: #232324;
+}
+
+a{
+    color: #7298d4;
+}
