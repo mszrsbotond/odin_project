@@ -8,7 +8,7 @@
 @font-face {
     font-family: rubik;
     src: url('rubik-blackitalic-webfont.woff2') format('woff2'),
-         url('rubik-blackitalic-webfont.woff') format('woff');;
+         url('rubik-blackitalic-webfont.woff') format('woff');
 }
 
 html {
