@@ -15,4 +15,4 @@ function Book(title, author, pages, read){
 }
 
 const harryPotter = new Book("Harry Potter és a Tiltott Varázslat", "J.K. Rowling", 102, false)
-harryPotter.info()
+console.log(Book)
