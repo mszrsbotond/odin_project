@@ -1,7 +1,7 @@
-class HashMap {
-  constructor(loadFactor, capacity) {
+export class HashMap {
+  constructor(loadFactor) {
     this.loadFactor = loadFactor;
-    this.capacity = capacity;
+    this.capacity = 16;
     this.buckets = [];
     this.length = 0;
   }
@@ -124,9 +124,3 @@ class HashMap {
     return entries;
   }
 }
-
-let map = new HashMap(0.75, 3000);
-map.set("apple", "red");
-map.set("apple", "red");
-map.set("banana", "yellow");
-map.set("nyuszi", "oki");
