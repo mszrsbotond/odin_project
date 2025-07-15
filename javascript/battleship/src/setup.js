@@ -15,6 +15,7 @@ export class Ship {
     if (this.timesOfHit === this.length) {
       this.sunk = true;
     }
+    return this.sunk
   }
 }
 

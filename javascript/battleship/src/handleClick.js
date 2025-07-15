@@ -1,10 +1,10 @@
 import { aiTurn } from "./aiTurn";
-import { colorBoard } from "./colorBoard";
+import { handleBoard } from "./handleBoard";
 
 function handleClick(ai, player, square) {
   let id = square.id;
   ai.gameboard.receiveAttack(id);
-  colorBoard(id, ai, square)
+  handleBoard(id, ai, square)
   aiTurn(ai, player);
 }
 

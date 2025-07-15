@@ -1,4 +1,4 @@
-import { colorBoard } from "./colorBoard";
+import { handleBoard } from "./handleBoard";
 
 export function aiTurn(player) {
   let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
@@ -14,6 +14,7 @@ export function aiTurn(player) {
 
   const square = document.querySelector(`.playerBoardContainer > #${randId}`);
 
-  colorBoard(randId, player, square)
+  handleBoard(randId, player, square)
+  player.gameboard.receiveAttack(randId)
 }
 
