@@ -1,5 +1,3 @@
-import { handleBoard } from "./handleBoard";
-
 export function aiTurn(player) {
   let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
   let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -12,9 +10,5 @@ export function aiTurn(player) {
 
   let randId = `${randLetter}${randNum}`;
 
-  const square = document.querySelector(`.playerBoardContainer > #${randId}`);
-
-  handleBoard(randId, player, square)
-  player.gameboard.receiveAttack(randId)
+  const square = document.querySelector(`.playerBoardContainer > #${randId}`)
 }
-
