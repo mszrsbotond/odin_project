@@ -2,7 +2,7 @@ import "./style.css";
 
 import { createAIBoard, createPlayerBoard } from "./createBoards";
 import { Gameboard, Player, Ship } from "./setup";
-import { handleClick } from "./handleClick";
+import { handleClick, playerTurn } from "./handleClick";
 
 const player = new Player();
 player.gameboard.placeShip(["A0", "A1", "A2"]);
@@ -17,15 +17,5 @@ createAIBoard(10, ai);
 const playerBoard = document.querySelectorAll(".playerBoardContainer > div");
 const aiBoard = document.querySelectorAll(".AIBoardContainer > div");
 
-let currUser = "player";
-playerBoard.forEach((square) => {
-  square.addEventListener("click", () => {
-    if (currUser == "player") {
-      currUser = "ai";
-      handleClick(player, square);
-    }else{
-        alert("It's the AI's turn!")
-        aiTurn()
-    }
-  });
-});
+
+playerTurn(ai, player)
