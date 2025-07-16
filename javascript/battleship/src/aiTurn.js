@@ -1,5 +1,3 @@
-import { handlePlayerPick } from "./handlePlayerPick";
-
 export function aiTurn(player) {
   let randId = generateRandId();
 
@@ -11,16 +9,25 @@ export function aiTurn(player) {
     let currSquareOnPlayerBoard = player.gameboard.board[x];
     if (randId === currSquareOnPlayerBoard.id) {
       if (currSquareOnPlayerBoard.hit == true) {
-        return aiTurn(player)
+        return aiTurn(player);
       }
       /* the gameboard obj of player receives an attack*/
       player.gameboard.receiveAttack(randId);
+      for (let x = 0; x < player.gameboard.ships.length; x++) {
+        player.gameboard.ships[x].checkSunk();
+      }
 
       /* coloring the squares */
       if (currSquareOnPlayerBoard.ship != null) {
         square.style["background-color"] = "green";
       } else {
         square.style["background-color"] = "red";
+      }
+
+      /* check whether all sunk or not */
+      if (player.gameboard.allSunk() === true) {
+        alert("player WON");
+        break;
       }
     }
   }

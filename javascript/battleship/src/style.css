@@ -1,6 +1,7 @@
 body{
     background-color: black;
     display: flex;
+    justify-content: center;
 }
 
 .AIBoardContainer, .playerBoardContainer{

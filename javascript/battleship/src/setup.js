@@ -28,6 +28,7 @@ export class Ship {
 export class Gameboard {
   constructor() {
     this.board = [];
+    this.ships = []
   }
 
   /* creating a board */
@@ -48,7 +49,8 @@ export class Gameboard {
 
   /* placing a ship on the board */
   placeShip(coordinatesOfShip) {
-    let newShip = new Ship(3, 0, false, coordinatesOfShip);
+    let newShip = new Ship(coordinatesOfShip.length, 0, false, coordinatesOfShip);
+    this.ships.push(newShip)
     for (let coordinate of newShip.coordinates) {
       for (let i = 0; i < 100; i++) {
         if (coordinate == this.board[i].id) {
@@ -72,20 +74,21 @@ export class Gameboard {
 
   /* checking whether all ships are sunk or not */
   allSunk() {
-    let hasLiveShip = false;
+    let allIsSunk = true;
 
     for (let i = 0; i < 100; i++) {
       if ((this.board[i].ship != null) && (this.board[i].ship.sunk === false)) {
-        hasLiveShip = true;
+        allIsSunk = false;
       }
     }
-    return hasLiveShip;
+    return allIsSunk;
   }
 }
 
 /* player */
 export class Player {
-  constructor() {
+  constructor(name) {
+    this.name = name
     this.gameboard = new Gameboard();
     this.gameboard.createBoard();
   }

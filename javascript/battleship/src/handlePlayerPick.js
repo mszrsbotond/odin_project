@@ -20,6 +20,9 @@ export function handlePlayerPick(ai, player) {
           }
           /* the gameboard obj of ai receives an attack*/
           ai.gameboard.receiveAttack(id);
+          for (let x = 0; x < ai.gameboard.ships.length; x++) {
+            ai.gameboard.ships[x].checkSunk();
+          }
 
           /* coloring the squares */
           if (currSquareOnAIBoard.ship != null) {
@@ -27,7 +30,14 @@ export function handlePlayerPick(ai, player) {
           } else {
             square.style["background-color"] = "red";
           }
-          aiTurn(player);
+
+          /* check whether all sunk or not */
+          if (ai.gameboard.allSunk() === true) {
+            alert("player WON");
+            break;
+          } else {
+            aiTurn(player);
+          }
         }
       }
     });
